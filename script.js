@@ -9,6 +9,7 @@ function calculateShipping() {
     let baseCost = 20; // base in Ghana Cedi (₵)
     console.log("Starting base cost:", baseCost);
 
+    
     // conditionals
     if (destinationCity === "Accra") {
       baseCost += 10;
@@ -41,7 +42,11 @@ function calculateShipping() {
      console.log("Overweight (>15kg) → +" + (extraWeight * 10) + " added, new cost:", baseCost);
     }
 
-
+     if (isNaN(weight) || weight < 1) {
+        document.getElementById("result").innerText = 
+            "🚫Error: Your package is lighter than a feather 🪶. Add some real weight!";
+        return; 
+    }
     if (isExpressDelivery) {
       baseCost *= 1.5;
       console.log("Express delivery applied → cost multiplied by 1.5, new cost:", baseCost);
