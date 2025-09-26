@@ -50,7 +50,7 @@ function calculateShipping() {
     let resultMessage = "The total shipping cost for your " 
       + weight + "kg package to " 
       + destinationCity + " is ₵" 
-      + parseInt(baseCost) + "."; // show as number no decimal 55.5
+      + parseInt(baseCost) + "."; // show as number no decimal 
 
     console.log("Final result:", resultMessage);
     document.getElementById("result").innerText = resultMessage;
